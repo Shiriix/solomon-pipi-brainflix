@@ -1,0 +1,10 @@
+.videoList {
+  list-style-type: none;
+  width: 20%;
+
+  &-item {
+    &__image {
+      list-style-type: none;
+    }
+  }
+}

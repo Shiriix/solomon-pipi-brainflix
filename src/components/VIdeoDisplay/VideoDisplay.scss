@@ -1,0 +1,33 @@
+.VideoDisplay {
+  width: 100%;
+
+  &__info1 {
+    display: flex;
+  }
+
+  &__info2 {
+    display: flex;
+  }
+
+  &__description {
+    margin: 1rem 0rem;
+  }
+}
+
+.viewsWrapper {
+  display: flex;
+}
+
+.likesWrapper {
+  display: flex;
+}
+
+.commentsNumber {
+  margin: 1rem 0rem;
+}
+
+.comments {
+  &__btn {
+    display: block;
+  }
+}
