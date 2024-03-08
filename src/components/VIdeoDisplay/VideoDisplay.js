@@ -3,11 +3,7 @@ import viewsIcon from "../../assets/Icons/views.svg";
 import likeIcon from "../../assets/Icons/likes.svg";
 import Comments from "../VideoComments/Comments";
 export default function VideoDisplay({ activeVideo }) {
-  let activeComments = activeVideo.comments;
-
   let infoDate = new Date(activeVideo.timestamp).toLocaleDateString();
-
-  let commentDate = new Date(activeComments.timestamp).toLocaleDateString();
 
   return (
     <>

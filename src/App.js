@@ -1,9 +1,9 @@
 import Header from "./components/Header/Header";
 import { useState } from "react";
-import videosJSON from "../../Data/videos.json";
-import videoDetailsJSON from "../../Data/video-details.json";
-import VideoDisplay from "../VIdeoDisplay/VideoDisplay";
-import VideoList from "../VideoList/VideoList";
+import videosJSON from "./Data/videos.json";
+import videoDetailsJSON from "./Data/video-details.json";
+import VideoDisplay from "./components/VIdeoDisplay/VideoDisplay";
+import VideoList from "./components/VideoList/VideoList";
 import "./styles/partials/_resets.scss";
 
 export default function App() {

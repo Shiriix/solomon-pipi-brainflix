@@ -1,6 +1,8 @@
 import React from "react";
 
 export default function Comments({ activeVideo }) {
+  let activeComments = activeVideo.comments;
+  let commentDate = new Date(activeComments.timestamp).toLocaleDateString();
   return (
     <article className="VideoDisplay__comments">
       <p className="commentsNumber"> {activeVideo.comments.length} Comments</p>
