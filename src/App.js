@@ -24,7 +24,11 @@ export default function App() {
       <Header />
       <main className="main">
         <VideoDisplay activeVideo={activeVideo} />
-        <VideoList videos={videos} handleClick={handleClickedVideo} />
+        <VideoList
+          videos={videos}
+          handleClick={handleClickedVideo}
+          activeVideo={activeVideo}
+        />
       </main>
     </>
   );

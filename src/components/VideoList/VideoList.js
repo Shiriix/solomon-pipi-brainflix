@@ -1,13 +1,18 @@
-export default function VideoList({ videos, handleClick }) {
+export default function VideoList({ videos, handleClick, activeVideo }) {
+  console.log(activeVideo);
+  const filteredVideo = videos.filter((video) => {
+    return video.id != activeVideo.id;
+  });
+
   return (
     <>
       <ul className="VideoList">
-        {videos.map((video) => {
+        {filteredVideo.map((video) => {
           return (
             <li
               key={video.id}
               className="VideoList-item"
-              onClick={() => handleClick(video)}
+              onClick={() => handleClick(video.id)}
             >
               <img
                 src={video.image}
