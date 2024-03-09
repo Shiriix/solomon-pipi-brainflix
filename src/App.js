@@ -5,6 +5,7 @@ import videoDetailsJSON from "./Data/video-details.json";
 import VideoDisplay from "./components/VIdeoDisplay/VideoDisplay";
 import VideoList from "./components/VideoList/VideoList";
 import "./styles/partials/_resets.scss";
+import "./styles/partials/_typography.scss";
 
 export default function App() {
   const [videos] = useState(videosJSON);
