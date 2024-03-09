@@ -16,7 +16,7 @@ export default function VideoDisplay({ activeVideo }) {
 
       <div className="VideoDisplay__divider"></div>
       <div className="VideoDisplay__info1">
-        <p className="VideoDisplay__uploader">{activeVideo.channel}</p>
+        <p className="VideoDisplay__uploader"> By {activeVideo.channel}</p>
         <div className="viewsWrapper">
           <img src={viewsIcon} alt="Views Icon" />
           <p className="VideoDisplay__views">{activeVideo.views}</p>

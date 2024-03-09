@@ -7,6 +7,7 @@ export default function VideoList({ videos, handleClick, activeVideo }) {
 
   return (
     <>
+      <p className="VideoList__title"> Next Videos</p>
       <ul className="VideoList">
         {filteredVideo.map((video) => {
           return (
@@ -20,8 +21,10 @@ export default function VideoList({ videos, handleClick, activeVideo }) {
                 alt={video.title}
                 className={"VideoList-item__image"}
               ></img>
-              <p className="VideosList-item__title">{video.title}</p>
-              <p className="VideosList-item__channel">{video.channel}</p>
+              <div className="VideosList-item__container">
+                <p className="VideosList-item__title">{video.title}</p>
+                <p className="VideosList-item__channel">{video.channel}</p>
+              </div>
             </li>
           );
         })}

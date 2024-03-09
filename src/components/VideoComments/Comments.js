@@ -35,11 +35,16 @@ export default function Comments({ activeVideo }) {
       <div className="VideoDisplay__existing-comments">
         {activeComments.map((activeComment) => {
           return (
-            <article key={activeComment.id}>
-              <p className="comment__name">{activeComment.name} </p>
-              <p className="comment__date">
-                {commentDate(activeComment.timestamp)}{" "}
-              </p>
+            <article
+              className="VideoDisplay__existing-comment"
+              key={activeComment.id}
+            >
+              <div className="comments__container">
+                <p className="comment__name">{activeComment.name} </p>
+                <p className="comment__date">
+                  {commentDate(activeComment.timestamp)}{" "}
+                </p>
+              </div>
               <p className="comment__text">{activeComment.comment} </p>
             </article>
           );

@@ -36,4 +36,25 @@
       border: none;
     }
   }
+
+  &__existing {
+    &-comments {
+      padding: 1rem;
+    }
+
+    &-comment {
+      margin: 0.5rem 0rem;
+      border-bottom: 1px solid $brand-primary;
+    }
+  }
+}
+.comments {
+  &__container {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.comment__text {
+  margin: 0.5rem 0rem;
 }
