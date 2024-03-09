@@ -17,6 +17,9 @@
       width: 35%;
       list-style: none;
       border-radius: 2px;
+      @include tablet-and-desktop {
+        width: 25%;
+      }
     }
   }
 }

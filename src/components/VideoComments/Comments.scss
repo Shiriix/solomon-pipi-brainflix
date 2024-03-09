@@ -8,10 +8,6 @@
       padding: 1rem;
     }
 
-    &-btn {
-      display: block;
-    }
-
     &-area {
       display: flex;
       padding: 0rem 1rem;
@@ -35,6 +31,25 @@
       color: $text-primary;
       border-radius: 6px;
       border: none;
+      @include tablet-and-desktop {
+        display: none;
+      }
+    }
+
+    &-btndesk {
+      display: none;
+      @include tablet-and-desktop {
+        display: flex;
+
+        padding: 0.7rem 5.5rem;
+
+        margin-left: 3rem;
+
+        background-color: $button-primary;
+        color: $text-primary;
+        border-radius: 6px;
+        border: none;
+      }
     }
 
     &-avatar {
@@ -66,4 +81,11 @@
 
 .comment__text {
   margin: 0.5rem 0rem;
+}
+
+textarea {
+  @include tablet-and-desktop {
+    width: 50%;
+    height: 2rem;
+  }
 }

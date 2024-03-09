@@ -1,5 +1,5 @@
 @use "../../styles/partials/variables" as *;
-@use "../../styles/partials/mixins";
+@use "../../styles/partials/mixins" as *;
 
 .VideoDisplay {
   width: 100%;
@@ -26,6 +26,16 @@
     background-color: #000;
     width: 95%;
     margin: auto;
+  }
+
+  &__divider1 {
+    height: 1px;
+    background-color: #000;
+    width: 95%;
+    margin: auto;
+    @include tablet-and-desktop {
+      display: none;
+    }
   }
 
   &__title {

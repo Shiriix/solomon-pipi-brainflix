@@ -14,7 +14,7 @@ export default function VideoDisplay({ activeVideo }) {
       ></video>
       <h1 className="VideoDisplay__title">{activeVideo.title}</h1>
 
-      <div className="VideoDisplay__divider"></div>
+      <div className="VideoDisplay__divider1"></div>
       <div className="VideoDisplay__info1">
         <p className="VideoDisplay__uploader"> By {activeVideo.channel}</p>
         <div className="viewsWrapper">

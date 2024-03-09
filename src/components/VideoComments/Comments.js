@@ -30,6 +30,9 @@ export default function Comments({ activeVideo }) {
             rows="7"
             placeholder="Add a new comment"
           ></textarea>
+          <button className="VideoDisplay__comments-btndesk" type="submit">
+            COMMENT
+          </button>
         </div>
         <button className="VideoDisplay__comments-btn" type="submit">
           {" "}
