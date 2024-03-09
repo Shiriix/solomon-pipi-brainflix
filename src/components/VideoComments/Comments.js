@@ -18,7 +18,11 @@ export default function Comments({ activeVideo }) {
       <form className="VideoDisplay__commentsform">
         <p className="VideoDisplay__comments-prompt">Join the conversation</p>
         <div className="VideoDisplay__comments-area">
-          <img className="form__avatar" src={avatar} alt="Avatar" />
+          <img
+            className="VideoDisplay__comments-avatar"
+            src={avatar}
+            alt="Avatar"
+          />
           <textarea
             name="commentArea"
             id="commentArea"

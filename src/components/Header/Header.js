@@ -18,6 +18,7 @@ export default function Header() {
         </div>
         <div className="form__button">
           <button className="form__btn">UPLOAD</button>
+          <img className="form__avatar-tab" src={avatar} alt="Avatar" />
         </div>
       </header>
     </>
