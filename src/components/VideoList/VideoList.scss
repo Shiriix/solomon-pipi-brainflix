@@ -1,10 +1,12 @@
-.videoList {
-  list-style-type: none;
-  width: 20%;
+.VideoList {
+  padding: 1rem;
 
   &-item {
+    list-style-type: none;
     &__image {
       list-style-type: none;
+      width: 25%;
+      list-style: none;
     }
   }
 }

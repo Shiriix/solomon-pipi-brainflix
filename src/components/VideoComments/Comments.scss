@@ -1,0 +1,39 @@
+@use "../../styles/partials/variables" as *;
+
+.VideoDisplay {
+  &__comments {
+    &-number {
+      margin: 0.4rem 0rem;
+      padding: 1rem;
+    }
+
+    &-btn {
+      display: block;
+    }
+
+    &-area {
+      display: flex;
+      padding: 0rem 1rem;
+    }
+
+    &-prompt {
+      padding: 0rem 5rem;
+      margin: 0.3rem 0rem;
+    }
+
+    &-btn {
+      margin-top: 1rem;
+
+      display: block;
+
+      padding: 0.7rem 5.5rem;
+
+      margin-left: 5rem;
+
+      background-color: $button-primary;
+      color: $text-primary;
+      border-radius: 6px;
+      border: none;
+    }
+  }
+}

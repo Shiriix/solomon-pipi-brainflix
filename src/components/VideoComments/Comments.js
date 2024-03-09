@@ -1,21 +1,33 @@
 import React from "react";
+import "./Comments.scss";
+import avatar from "../../assets/Images/Mohan-muruge.jpg";
 
 export default function Comments({ activeVideo }) {
   let activeComments = activeVideo.comments;
-  let commentDate = new Date(activeComments.timestamp).toLocaleDateString();
+
+  const commentDate = (timestamp) => {
+    return new Date(timestamp).toLocaleDateString();
+  };
+
   return (
     <article className="VideoDisplay__comments">
-      <p className="commentsNumber"> {activeVideo.comments.length} Comments</p>
-      <form className="Commentsform">
-        <p>Join the conversation</p>
-        <textarea
-          name="commentArea"
-          id="commentArea"
-          cols="30"
-          rows="10"
-          placeholder="Add a new comment"
-        ></textarea>
-        <button className="comments__btn" type="submit">
+      <p className="VideoDisplay__comments-number">
+        {" "}
+        {activeVideo.comments.length} Comments
+      </p>
+      <form className="VideoDisplay__commentsform">
+        <p className="VideoDisplay__comments-prompt">Join the conversation</p>
+        <div className="VideoDisplay__comments-area">
+          <img className="form__avatar" src={avatar} alt="Avatar" />
+          <textarea
+            name="commentArea"
+            id="commentArea"
+            cols="30"
+            rows="7"
+            placeholder="Add a new comment"
+          ></textarea>
+        </div>
+        <button className="VideoDisplay__comments-btn" type="submit">
           {" "}
           COMMENT
         </button>
@@ -25,7 +37,9 @@ export default function Comments({ activeVideo }) {
           return (
             <article key={activeComment.id}>
               <p className="comment__name">{activeComment.name} </p>
-              <p className="comment__date">{commentDate} </p>
+              <p className="comment__date">
+                {commentDate(activeComment.timestamp)}{" "}
+              </p>
               <p className="comment__text">{activeComment.comment} </p>
             </article>
           );

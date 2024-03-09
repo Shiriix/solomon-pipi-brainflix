@@ -1,5 +1,6 @@
+import "./VideoList.scss";
+
 export default function VideoList({ videos, handleClick, activeVideo }) {
-  console.log(activeVideo);
   const filteredVideo = videos.filter((video) => {
     return video.id != activeVideo.id;
   });

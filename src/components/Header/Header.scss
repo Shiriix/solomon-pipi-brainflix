@@ -1,3 +1,5 @@
+@use "../../styles/partials/variables" as *;
+
 .header {
   &__branding {
     display: flex;

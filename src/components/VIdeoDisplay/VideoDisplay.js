@@ -14,6 +14,7 @@ export default function VideoDisplay({ activeVideo }) {
       ></video>
       <h1 className="VideoDisplay__title">{activeVideo.title}</h1>
 
+      <div className="VideoDisplay__divider"></div>
       <div className="VideoDisplay__info1">
         <p className="VideoDisplay__uploader">{activeVideo.channel}</p>
         <div className="viewsWrapper">
@@ -29,6 +30,7 @@ export default function VideoDisplay({ activeVideo }) {
           <p className="VideoDisplay__likes">{activeVideo.likes}</p>
         </div>
       </div>
+      <div className="VideoDisplay__divider"></div>
       <article className="VideoDisplay__descriptions">
         <p className="VideoDisplay__description">{activeVideo.description}</p>
       </article>
