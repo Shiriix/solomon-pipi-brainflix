@@ -44,7 +44,10 @@ export default function Comments({ activeVideo }) {
                 key={activeComment.id}
               >
                 <div className="comments__container">
-                  <p className="comment__name">{activeComment.name} </p>
+                  <div className="comments__avatar">
+                    <div className="comment__avatar"></div>
+                    <p className="comment__name">{activeComment.name} </p>
+                  </div>
                   <p className="comment__date">
                     {commentDate(activeComment.timestamp)}{" "}
                   </p>

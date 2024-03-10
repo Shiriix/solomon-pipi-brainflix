@@ -87,6 +87,12 @@
     display: flex;
     justify-content: space-between;
   }
+
+  &__avatar {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+  }
 }
 
 .comment {
@@ -96,6 +102,17 @@
 
   &__date {
     color: $brand-primary;
+  }
+
+  &__avatar {
+    background-color: $brand-primary;
+    border-radius: 6rem;
+    height: 2rem;
+    width: 2rem;
+  }
+
+  &__name {
+    font-weight: 500;
   }
 }
 

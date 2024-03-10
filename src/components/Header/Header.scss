@@ -9,11 +9,14 @@
   &__branding {
     display: flex;
     justify-content: center;
+    margin: 1rem 0rem;
   }
 }
 
 .form {
-  padding: 1rem;
+  @include tablet-and-desktop {
+    padding: 1rem;
+  }
   &__search {
     background-image: url(../../assets/Icons/search.svg);
     background-position: 0.1cm;
