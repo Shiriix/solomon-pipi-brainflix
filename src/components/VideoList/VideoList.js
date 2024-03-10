@@ -2,7 +2,7 @@ import "./VideoList.scss";
 
 export default function VideoList({ videos, handleClick, activeVideo }) {
   const filteredVideo = videos.filter((video) => {
-    return video.id != activeVideo.id;
+    return video.id !== activeVideo.id;
   });
 
   return (
