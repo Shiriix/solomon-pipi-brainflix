@@ -4,34 +4,61 @@
 .VideoDisplay {
   width: 100%;
 
+  &__uploader {
+    font-weight: 600;
+    color: #000;
+  }
+
+  &__wrapper {
+    @include tablet-and-desktop {
+      display: flex;
+      justify-content: space-around;
+    }
+  }
+
   &__info1 {
     display: flex;
     justify-content: space-around;
     padding: 0.5rem 0rem;
+    color: $brand-primary;
+    @include tablet-and-desktop {
+      gap: 1rem;
+    }
   }
 
   &__info2 {
     display: flex;
     justify-content: space-around;
     padding: 0.5rem 0rem;
+    color: $brand-primary;
+    @include tablet-and-desktop {
+      gap: 1rem;
+    }
   }
 
   &__description {
     margin: 0.5rem 0rem;
     padding: 1rem;
+    text-wrap: balance;
+    @include tablet-and-desktop {
+      padding: 0rem 5rem;
+    }
   }
 
   &__divider {
     height: 1px;
     background-color: #000;
-    width: 95%;
+    width: 80%;
     margin: auto;
+    @include desktop {
+      width: 95%;
+    }
   }
 
   &__divider1 {
     height: 1px;
     background-color: #000;
-    width: 95%;
+    width: 80%;
     margin: auto;
     @include tablet-and-desktop {
       display: none;
@@ -41,10 +68,31 @@
   &__title {
     padding: 1rem;
   }
+
+  &__Date {
+    &-mob {
+      @include tablet-and-desktop {
+        display: none;
+      }
+    }
+    display: none;
+    @include tablet-and-desktop {
+      display: block;
+    }
+  }
 }
 
 .viewsWrapper {
-  display: flex;
+  display: none;
+  @include tablet-and-desktop {
+    display: flex;
+  }
+  &-mob {
+    display: flex;
+    @include tablet-and-desktop {
+      display: none;
+    }
+  }
 }
 
 .likesWrapper {

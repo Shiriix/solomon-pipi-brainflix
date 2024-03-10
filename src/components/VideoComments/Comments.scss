@@ -14,11 +14,16 @@
     }
 
     &-prompt {
+      color: $brand-primary;
       padding: 0rem 5rem;
       margin: 0.3rem 0rem;
     }
 
     &-btn {
+      background-image: url(../../assets/Icons/add_comment.svg);
+      background-position: 0.1cm;
+      background-repeat: no-repeat;
+      text-indent: 1rem;
       margin-top: 1rem;
 
       display: block;
@@ -39,6 +44,11 @@
     &-btndesk {
       display: none;
       @include tablet-and-desktop {
+        background-image: url(../../assets/Icons/add_comment.svg);
+        background-position: 0.1cm;
+        background-repeat: no-repeat;
+        text-indent: 1rem;
+
         display: flex;
 
         padding: 0.7rem 5.5rem;
@@ -79,8 +89,14 @@
   }
 }
 
-.comment__text {
-  margin: 0.5rem 0rem;
+.comment {
+  &__text {
+    margin: 0.5rem 0rem;
+  }
+
+  &__date {
+    color: $brand-primary;
+  }
 }
 
 textarea {

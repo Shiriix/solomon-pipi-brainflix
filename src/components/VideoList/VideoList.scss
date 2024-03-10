@@ -1,9 +1,11 @@
 @use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
 
 .VideoList {
   padding: 1rem;
 
   &__title {
+    color: $brand-primary;
     margin: 0rem 1rem;
   }
 

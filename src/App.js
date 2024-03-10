@@ -20,11 +20,17 @@ export default function App() {
     setActiveVideo(newActiveVideo);
   };
 
+  const handleSubmit = (event) => {
+    console.log(event);
+    event.preventDefault();
+  };
+
   return (
     <>
       <Header />
       <main className="main">
-        <VideoDisplay activeVideo={activeVideo} />
+        <VideoDisplay activeVideo={activeVideo} handleSubmit={handleSubmit} />
+
         <VideoList
           videos={videos}
           handleClick={handleClickedVideo}
