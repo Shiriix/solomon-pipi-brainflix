@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import VideoDisplay from "../../components/VIdeoDisplay/VideoDisplay";
 import VideoList from "../../components/VideoList/VideoList";
 import { useParams } from "react-router-dom";
-import axios, { Axios } from "axios";
+import axios from "axios";
 
 export default function HomePage() {
   const { videoId } = useParams();
@@ -18,7 +18,7 @@ export default function HomePage() {
   };
 
   const getVideos = async () => {
-    const { data } = await Axios.get(
+    const { data } = await axios.get(
       `https://unit-3-project-api-0a5620414506.herokuapp.com/videos?api_key=123`
     );
 

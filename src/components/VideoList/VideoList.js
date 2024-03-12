@@ -1,13 +1,13 @@
 import "./VideoList.scss";
 
 export default function VideoList({ videos, handleClick, activeVideo }) {
-  const filteredVideo = videos.filter((video) => {
-    return video.id !== activeVideo.id;
-  });
+  // const filteredVideo = videos.filter((video) => {
+  //   return video.id !== activeVideo.id;
+  // });
 
   return (
     <>
-      <p className="VideoList__title"> Next Videos</p>
+      {/* <p className="VideoList__title"> Next Videos</p>
       <ul className="VideoList">
         {filteredVideo.map((video) => {
           return (
@@ -28,7 +28,7 @@ export default function VideoList({ videos, handleClick, activeVideo }) {
             </li>
           );
         })}
-      </ul>
+      </ul> */}
     </>
   );
 }

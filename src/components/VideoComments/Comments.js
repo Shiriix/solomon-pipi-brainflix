@@ -3,15 +3,17 @@ import "./Comments.scss";
 import avatar from "../../assets/Images/Mohan-muruge.jpg";
 
 export default function Comments({ activeVideo }) {
-  let activeComments = activeVideo.comments;
+  // let activeComments = activeVideo.comments;
+
+  // console.log(activeVideo);
 
   const commentDate = (timestamp) => {
-    return new Date(timestamp).toLocaleDateString();
+    // return new Date(timestamp).toLocaleDateString();
   };
 
   return (
     <>
-      <article className="VideoDisplay__comments">
+      {/* <article className="VideoDisplay__comments">
         <p className="VideoDisplay__comments-number">
           {" "}
           {activeVideo.comments.length} Comments
@@ -57,7 +59,7 @@ export default function Comments({ activeVideo }) {
             );
           })}
         </div>
-      </article>
+      </article> */}
     </>
   );
 }

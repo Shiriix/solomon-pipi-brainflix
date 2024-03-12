@@ -2,8 +2,9 @@ import "./VideoDisplay.scss";
 import viewsIcon from "../../assets/Icons/views.svg";
 import likeIcon from "../../assets/Icons/likes.svg";
 import Comments from "../VideoComments/Comments";
+
 export default function VideoDisplay({ activeVideo }) {
-  let infoDate = new Date(activeVideo.timestamp).toLocaleDateString();
+  console.log(activeVideo);
 
   return (
     <>
@@ -24,7 +25,11 @@ export default function VideoDisplay({ activeVideo }) {
           {activeVideo && (
             <p className="VideoDisplay__uploader"> By {activeVideo.channel}</p>
           )}
-          {activeVideo && <p className="VideoDisplay__Date">{infoDate}</p>}
+          {activeVideo && (
+            <p className="VideoDisplay__Date">
+              {new Date(activeVideo.timestamp).toLocaleDateString()}
+            </p>
+          )}
           <div className="viewsWrapper-mob">
             <img src={viewsIcon} alt="Views Icon" />
             {activeVideo && (
@@ -34,7 +39,11 @@ export default function VideoDisplay({ activeVideo }) {
         </div>
 
         <div className="VideoDisplay__info2">
-          {activeVideo && <p className="VideoDisplay__Date-mob">{infoDate}</p>}
+          {activeVideo && (
+            <p className="VideoDisplay__Date-mob">
+              {new Date(activeVideo.timestamp).toLocaleDateString()}
+            </p>
+          )}
           <div className="viewsWrapper">
             <img src={viewsIcon} alt="Views Icon" />
             {activeVideo && (
@@ -43,7 +52,9 @@ export default function VideoDisplay({ activeVideo }) {
           </div>
           <div className="likesWrapper">
             <img src={likeIcon} alt="Likes Icon" />
-            <p className="VideoDisplay__likes">{activeVideo.likes}</p>
+            {activeVideo && (
+              <p className="VideoDisplay__likes">{activeVideo.likes}</p>
+            )}
           </div>
         </div>
       </div>
