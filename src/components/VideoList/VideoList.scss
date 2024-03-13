@@ -4,6 +4,9 @@
 .VideoList {
   padding: 1rem;
 
+  &__link {
+    text-decoration: none;
+  }
   &__title {
     color: $brand-primary;
     margin: 0rem 1rem;

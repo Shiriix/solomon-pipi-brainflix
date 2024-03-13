@@ -9,14 +9,6 @@ export default function HomePage() {
   const [activeVideo, setActiveVideo] = useState(null);
   const [videos, setVideos] = useState(null);
 
-  const handleClickedVideo = (clickedId) => {
-    const newActiveVideo = activeVideo.find((videos) => {
-      return videos.id === clickedId;
-    });
-
-    setActiveVideo(newActiveVideo);
-  };
-
   const getVideos = async () => {
     const { data } = await axios.get(
       `https://unit-3-project-api-0a5620414506.herokuapp.com/videos?api_key=123`
@@ -47,15 +39,15 @@ export default function HomePage() {
     }
   }, [videoId, videos]);
 
+  if (!activeVideo || !videos) {
+    return <div>Loading...</div>;
+  }
+
   return (
     <>
       <VideoDisplay activeVideo={activeVideo} />
 
-      <VideoList
-        videos={videos}
-        handleClick={handleClickedVideo}
-        activeVideo={activeVideo}
-      />
+      <VideoList videos={videos} activeVideo={activeVideo} />
     </>
   );
 }

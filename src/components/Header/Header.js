@@ -1,13 +1,16 @@
 import logo from "../../assets//Logo/BrainFlix-logo.svg";
 import "./Header.scss";
 import avatar from "../../assets/Images/Mohan-muruge.jpg";
+import { Link } from "react-router-dom";
 
 export default function Header() {
   return (
     <>
       <header className="header">
         <div className="header__branding">
-          <img className="header__logo" src={logo} alt="Logo" />
+          <Link to="/">
+            <img className="header__logo" src={logo} alt="Logo" />
+          </Link>
         </div>
 
         <div className="form__wrapper">

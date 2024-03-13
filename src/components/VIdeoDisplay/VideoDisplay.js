@@ -4,8 +4,6 @@ import likeIcon from "../../assets/Icons/likes.svg";
 import Comments from "../VideoComments/Comments";
 
 export default function VideoDisplay({ activeVideo }) {
-  console.log(activeVideo);
-
   return (
     <>
       {activeVideo && (
