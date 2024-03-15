@@ -1,0 +1,11 @@
+.split {
+  max-width: 1280px;
+  @include desktop {
+    display: flex;
+    margin: auto;
+  }
+
+  &-left {
+    width: 60%;
+  }
+}

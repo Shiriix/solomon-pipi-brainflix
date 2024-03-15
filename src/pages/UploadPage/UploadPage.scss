@@ -2,9 +2,29 @@
 @use "../../styles/partials/mixins" as *;
 
 .UploadPage {
+  &__thumbnail {
+    @include desktop {
+      width: 60%;
+    }
+  }
+
+  &__container {
+    padding: 1rem;
+    @include desktop {
+      max-width: 1280px;
+      margin: auto;
+    }
+  }
+
   &__body {
     display: flex;
     flex-direction: column;
+    @include desktop {
+      flex-direction: row;
+      padding: 1rem 0rem;
+      border-bottom: 1px solid $brand-primary;
+      border-top: 1px solid $brand-primary;
+    }
 
     padding: 1rem;
   }
@@ -28,6 +48,9 @@
     display: flex;
     flex-direction: column;
     width: 100%;
+    @include desktop {
+      margin-left: 1rem;
+    }
   }
 
   &__publish {
@@ -55,10 +78,41 @@
     display: flex;
     @include tablet-and-desktop {
       flex-direction: row-reverse;
+      align-items: center;
     }
   }
 
   &__subtitle {
     color: $brand-primary;
+    text-transform: uppercase;
+    margin: 0.6rem 0rem;
+  }
+
+  &__label {
+    margin: 0.6rem 0rem;
+    color: $brand-primary;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+  }
+
+  &__input {
+    border-radius: 6px;
+    height: 2rem;
+    border: 1px solid $brand-primary;
+    &::placeholder {
+      font-family: Avenir Next;
+    }
+
+    &--description {
+      height: 5rem;
+      border-radius: 6px;
+      border: 1px solid $brand-primary;
+      &::placeholder {
+        font-family: Avenir Next;
+      }
+      @include tablet-and-desktop {
+        width: 100%;
+      }
+    }
   }
 }

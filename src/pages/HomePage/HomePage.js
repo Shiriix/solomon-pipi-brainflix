@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
-import VideoDisplay from "../../components/VIdeoDisplay/VideoDisplay";
 import VideoList from "../../components/VideoList/VideoList";
 import { useParams } from "react-router-dom";
 import axios from "axios";
+import VideoHero from "../../components/VideoHero/VideoHero";
+import VideoDetails from "../../components/VIdeoDisplay/VideoDetails";
 
 export default function HomePage() {
   const { videoId } = useParams();
@@ -45,9 +46,13 @@ export default function HomePage() {
 
   return (
     <>
-      <VideoDisplay activeVideo={activeVideo} />
-
-      <VideoList videos={videos} activeVideo={activeVideo} />
+      <VideoHero activeVideo={activeVideo} />
+      <div className="split">
+        <div className="split-left">
+          <VideoDetails activeVideo={activeVideo} />
+        </div>
+        <VideoList videos={videos} activeVideo={activeVideo} />
+      </div>
     </>
   );
 }
