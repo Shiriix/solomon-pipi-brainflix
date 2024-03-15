@@ -2,9 +2,7 @@ import { Link } from "react-router-dom";
 import "./VideoList.scss";
 
 export default function VideoList({ videos, activeVideo }) {
-  const filteredVideo = videos.filter((video) => {
-    return video.id !== activeVideo.id;
-  });
+  const filteredVideo = videos.filter((video) => video.id !== activeVideo.id);
 
   return (
     <>

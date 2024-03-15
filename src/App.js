@@ -1,5 +1,4 @@
 import Header from "./components/Header/Header";
-import { useState } from "react";
 
 import "./styles/partials/_resets.scss";
 import "./styles/partials/_typography.scss";
