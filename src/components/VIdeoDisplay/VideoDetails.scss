@@ -105,9 +105,4 @@
     display: flex;
     margin: auto;
   }
-  &-left {
-    @include desktop {
-      width: 75%;
-    }
-  }
 }
