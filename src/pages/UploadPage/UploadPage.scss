@@ -16,6 +16,13 @@
     }
   }
 
+  &__containers {
+    @include desktop {
+      display: flex;
+      flex-direction: row;
+    }
+  }
+
   &__body {
     display: flex;
     flex-direction: column;
