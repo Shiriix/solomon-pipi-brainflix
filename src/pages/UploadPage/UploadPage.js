@@ -31,7 +31,7 @@ export default function UploadPage() {
           <h1 className="UploadPage__title">Upload Video</h1>
           <div className="UploadPage__body">
             <form onSubmit={handleSubmit} className="UploadPage__form">
-              <div className="uploadPage__containers">
+              <div className="UploadPage__main-wrapper">
                 <div className="UploadPage__thumbnail">
                   <p className="UploadPage__subtitle">video thumbnail</p>
                   <img
@@ -40,7 +40,7 @@ export default function UploadPage() {
                     className="UploadPage__img"
                   />
                 </div>
-                <div className="uploadPage__form-container">
+                <div className="UploadPage__form-container">
                   <label htmlFor="video__title" className="UploadPage__label">
                     title your video
                   </label>
