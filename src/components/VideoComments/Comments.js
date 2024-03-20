@@ -14,7 +14,10 @@ export default function Comments({ activeVideo }) {
       <article className="VideoDisplay__comments">
         <p className="VideoDisplay__comments-number">
           {" "}
-          {activeVideo.comments.length} Comments
+          {Array.isArray(activeVideo.comments)
+            ? activeVideo.comments.length
+            : 0}{" "}
+          Comments
         </p>
         <form className="VideoDisplay__commentsform">
           <p className="VideoDisplay__comments-prompt">Join the conversation</p>
@@ -37,25 +40,26 @@ export default function Comments({ activeVideo }) {
 
         <button className="VideoDisplay__comments-btn">COMMENT</button>
         <div className="VideoDisplay__existing-comments">
-          {activeComments.map((activeComment) => {
-            return (
-              <article
-                className="VideoDisplay__existing-comment"
-                key={activeComment.id}
-              >
-                <div className="comments__container">
-                  <div className="comments__avatar">
-                    <div className="comment__avatar"></div>
-                    <p className="comment__name">{activeComment.name} </p>
+          {activeComments &&
+            activeComments.map((activeComment) => {
+              return (
+                <article
+                  className="VideoDisplay__existing-comment"
+                  key={activeComment.id}
+                >
+                  <div className="comments__container">
+                    <div className="comments__avatar">
+                      <div className="comment__avatar"></div>
+                      <p className="comment__name">{activeComment.name} </p>
+                    </div>
+                    <p className="comment__date">
+                      {commentDate(activeComment.timestamp)}{" "}
+                    </p>
                   </div>
-                  <p className="comment__date">
-                    {commentDate(activeComment.timestamp)}{" "}
-                  </p>
-                </div>
-                <p className="comment__text">{activeComment.comment} </p>
-              </article>
-            );
-          })}
+                  <p className="comment__text">{activeComment.comment} </p>
+                </article>
+              );
+            })}
         </div>
       </article>
     </>

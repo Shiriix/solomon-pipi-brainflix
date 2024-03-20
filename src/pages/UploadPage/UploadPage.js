@@ -2,13 +2,21 @@ import { Link, useNavigate } from "react-router-dom";
 import uploadImage from "../../assets/Images/Upload-video-preview.jpg";
 import "./UploadPage.scss";
 import { useState } from "react";
+import axios from "axios";
 
 export default function UploadPage() {
   const [message, setMessage] = useState(false);
 
   const nav = useNavigate();
 
-  const publishNav = () => {
+  const publishNav = (e) => {
+    e.preventDefault();
+
+    axios.post("http://localhost:5051/videos/", {
+      title: e.target.title.value,
+      description: e.target.description.value,
+    });
+
     setMessage(!false);
     setTimeout(() => {
       nav("/");
@@ -30,11 +38,12 @@ export default function UploadPage() {
                 className="UploadPage__img"
               />
             </div>
-            <form className="UploadPage__form">
+            <form onSubmit={publishNav} className="UploadPage__form">
               <label htmlFor="video__title" className="UploadPage__label">
                 title your video
               </label>
               <input
+                id="title"
                 name="video__title"
                 type="text"
                 className="UploadPage__input"
@@ -44,19 +53,18 @@ export default function UploadPage() {
                 add a video description
               </label>
               <textarea
+                id="description"
                 name="video__desc"
                 className="UploadPage__input--description"
                 placeholder="Add a description to your video"
               ></textarea>
+              <div className="UploadPage__buttons">
+                <button className="UploadPage__publish">Publish</button>
+                <Link to="/">
+                  <button className="UploadPage__cancel">Cancel</button>
+                </Link>
+              </div>
             </form>
-          </div>
-          <div className="UploadPage__buttons">
-            <button onClick={publishNav} className="UploadPage__publish">
-              Publish
-            </button>
-            <Link to="/">
-              <button className="UploadPage__cancel">Cancel</button>
-            </Link>
           </div>
           {message && <p>Published</p>}
         </div>

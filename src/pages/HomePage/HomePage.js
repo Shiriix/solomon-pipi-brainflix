@@ -11,17 +11,13 @@ export default function HomePage() {
   const [videos, setVideos] = useState(null);
 
   const getVideos = async () => {
-    const { data } = await axios.get(
-      `https://unit-3-project-api-0a5620414506.herokuapp.com/videos?api_key=123`
-    );
+    const { data } = await axios.get(`http://localhost:5051/videos`);
 
     setVideos(data);
   };
 
   const getVideo = async (id) => {
-    const { data } = await axios.get(
-      `https://unit-3-project-api-0a5620414506.herokuapp.com/videos/${id}?api_key=123`
-    );
+    const { data } = await axios.get(`http://localhost:5051/videos/${id}`);
 
     setActiveVideo(data);
   };
