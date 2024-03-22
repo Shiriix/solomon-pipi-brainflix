@@ -16,7 +16,7 @@ export default function Comments({ activeVideo }) {
           {" "}
           {Array.isArray(activeVideo.comments)
             ? activeVideo.comments.length
-            : 0}{" "}
+            : 0}
           Comments
         </p>
         <form className="VideoDisplay__commentsform">

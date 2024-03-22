@@ -10,9 +10,9 @@ export default function VideoDetails({ activeVideo }) {
         <h1 className="VideoDetails__title">{activeVideo.title}</h1>
       )}
 
-      <div className="VideoDetails__divider1"></div>
+      <div className="VideoDetails__divider-main"></div>
       <div className="VideoDetails__wrapper">
-        <div className="VideoDetails__info1">
+        <div className="VideoDetails__info-one">
           {activeVideo && (
             <p className="VideoDetails__uploader"> By {activeVideo.channel}</p>
           )}
@@ -29,7 +29,7 @@ export default function VideoDetails({ activeVideo }) {
           </div>
         </div>
 
-        <div className="VideoDetails__info2">
+        <div className="VideoDetails__info-two">
           {activeVideo && (
             <p className="VideoDetails__Date-mob">
               {new Date(activeVideo.timestamp).toLocaleDateString()}

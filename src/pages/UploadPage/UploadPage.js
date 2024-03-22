@@ -71,7 +71,7 @@ export default function UploadPage() {
             </form>
           </div>
 
-          {message && <p>Published</p>}
+          {message && <p className="UploadPage__message">Published</p>}
         </div>
       </article>
     </>

@@ -16,23 +16,24 @@
     }
   }
 
-  &__info1 {
-    display: flex;
-    justify-content: space-around;
-    padding: 0.5rem 0rem;
-    color: $brand-primary;
-    @include tablet-and-desktop {
-      gap: 1rem;
+  &__info {
+    &-one {
+      display: flex;
+      justify-content: space-around;
+      padding: 0.5rem 0rem;
+      color: $brand-primary;
+      @include tablet-and-desktop {
+        gap: 1rem;
+      }
     }
-  }
-
-  &__info2 {
-    display: flex;
-    justify-content: space-around;
-    padding: 0.5rem 0rem;
-    color: $brand-primary;
-    @include tablet-and-desktop {
-      gap: 1rem;
+    &-two {
+      display: flex;
+      justify-content: space-around;
+      padding: 0.5rem 0rem;
+      color: $brand-primary;
+      @include tablet-and-desktop {
+        gap: 1rem;
+      }
     }
   }
 
@@ -53,15 +54,14 @@
     @include desktop {
       width: 95%;
     }
-  }
-
-  &__divider1 {
-    height: 1px;
-    background-color: #000;
-    width: 80%;
-    margin: auto;
-    @include tablet-and-desktop {
-      display: none;
+    &-main {
+      height: 1px;
+      background-color: #000;
+      width: 80%;
+      margin: auto;
+      @include tablet-and-desktop {
+        display: none;
+      }
     }
   }
 

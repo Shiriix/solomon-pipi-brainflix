@@ -139,4 +139,10 @@
       }
     }
   }
+
+  &__message {
+    background-color: $button-primary;
+    color: $text-primary;
+    width: 4rem;
+  }
 }
